@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import { FaUser } from "react-icons/fa";
+import {LOGO} from "../utils/constants";
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../utils/firebase';
 import { signOut } from 'firebase/auth';
@@ -24,7 +25,7 @@ const Header = () => {
   }
 
   useEffect(()=>{
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe= onAuthStateChanged(auth, (user) => {
       if (user) {
         const {uid, email, displayName} = user;
 
@@ -42,14 +43,14 @@ const Header = () => {
         navigate("/")
       }
     });
-    
-  }, []);
+    return () => unsubscribe();
+  });
 
 
 
   return (
     <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
-        <img className='w-44' src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="logo" />
+        <img className='w-44' src= {LOGO} alt="logo" />
 
        {user && (<div>
        <FaUser size={60} color='maroon' className=' pt-6 '/>

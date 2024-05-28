@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useRef } from 'react';
-
+import {bg} from "../utils/constants";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
@@ -53,6 +53,7 @@ const Login = () => {
       .then((userCredential) => {
         
         const user = userCredential.user;
+        console.log(user);
        
       })
       .catch((error) => {
@@ -72,7 +73,7 @@ const Login = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/a99688ca-33c3-4099-9baa-07a2e2acb398/ca15fd28-b624-4852-8bfe-9cdd5c88475d/IN-en-20240520-popsignuptwoweeks-perspective_alpha_website_small.jpg" alt="bg" />
+        <img src={bg} alt="bg" />
       </div>
       <form 
       onSubmit={(e)=> e.preventDefault()}

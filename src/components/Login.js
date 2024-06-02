@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useRef } from 'react';
-import {bg} from "../utils/constants";
+import bg from "../assets/bg.jpg";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';

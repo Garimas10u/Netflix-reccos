@@ -44,7 +44,7 @@ const Header = () => {
       }
     });
     return () => unsubscribe();
-  });
+  }, [dispatch, navigate]);
 
 
 

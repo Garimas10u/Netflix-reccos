@@ -14,6 +14,9 @@
 -implemented sign out
 -update Profile
 -Fetch from TMDB movies
+-Fetch movie videos using a custom hook
+-styled the browse page
+-Update store with movie data
 
 
 #Features

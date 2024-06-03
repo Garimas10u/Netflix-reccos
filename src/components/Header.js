@@ -53,7 +53,7 @@ const Header = () => {
         <img className='w-44' src= {LOGO} alt="logo" />
 
        {user && (<div>
-       <FaUser size={60} color='maroon' className=' pt-6 '/>
+       <FaUser size={60} color='darkred' className=' pt-6 '/>
        <button onClick={handleSignout}className='font-bold'>Sign Out</button>
        </div>
        )}

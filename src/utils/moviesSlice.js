@@ -12,7 +12,7 @@ const moviesSlice=createSlice({
             state.nowPlayingMovies=action.payload;
         },
         addTrailerVideo: (state, action)=>{
-            state.TrailerVideo=action.payload;
+            state.trailerVideo=action.payload;
         },
     },
 });

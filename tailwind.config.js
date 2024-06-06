@@ -4,6 +4,15 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.no-scrollbar::-webkit-scrollbar': {
+          display: 'none',
+        },
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    }
+  ],
 }
 

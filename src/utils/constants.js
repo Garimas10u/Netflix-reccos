@@ -8,3 +8,6 @@ export const API_OPTIONS= {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNmY4OTg3Nzc4MjUxMmExNWY2OTBlNDNjYzczNWZmMyIsInN1YiI6IjY2NTIzZDAxMDJmMjk0Zjc1MTI2ZmE0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.K1VmnkhTqpp52Va1NGrXxjpUnuMOVLooeEwn8CL0PSY'
     }
   };
+
+
+  export const IMG_CDN_URL="https://image.tmdb.org/t/p/w200"

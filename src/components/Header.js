@@ -7,7 +7,9 @@ import { signOut } from 'firebase/auth';
 import { useSelector } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
+import { toggleGptSearchView } from '../utils/gptSlice';
 import { addUser, removeUser } from '../utils/userSlice';
+import { changeLanguage } from '../utils/configSlice'; 
 
 
 
@@ -15,6 +17,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate =useNavigate();
   const user=useSelector((store)=> store.user);
+  const showGptSearch =useSelector((store => store.gpt.showGptSearch))
 
   const handleSignout=() =>{
     signOut(auth).then(()=>{
@@ -46,15 +49,33 @@ const Header = () => {
     return () => unsubscribe();
   }, [dispatch, navigate]);
 
+  const handleGptSearchClick =() =>{
+    //toggle GPT Search button
+    dispatch(toggleGptSearchView());
 
+  }
+  const handleLangChange=(e) =>{
+   dispatch(changeLanguage(e.target.value));
+  }
 
   return (
     <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
-        <img className='w-44' src= {LOGO} alt="logo" />
+        <img className='w-44' src={LOGO} alt="logo" />
 
        {user && (<div>
-       <FaUser size={60} color='darkred' className=' pt-6 '/>
-       <button onClick={handleSignout}className='font-bold'>Sign Out</button>
+        <div className='flex  items-center p-2'>
+          {showGptSearch && <select className='p-4 mx-6 bg-gray-900 text-white ' onClick={handleLangChange}> 
+            <option value="en">English</option>
+            <option value="hindi">Hindi</option>
+            <option value="spanish">Spanish</option>
+          </select>}
+        <button className='p-4 mr-6 rounded-lg bg-red-700 text-white' onClick={handleGptSearchClick}>
+          {showGptSearch? "Home" : "GPT Search"}
+          </button>
+       <FaUser size={40} color='white' className=''/>
+       <button onClick={handleSignout}className='font-bold text-white align-center'>Sign Out</button>
+        </div>
+      
        </div>
        )}
         

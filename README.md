@@ -30,3 +30,5 @@
 -Netflix GPT
 -Search Bar
 -Movie Suggestions
+-multilanguage Feature
+-Integrate GPT API

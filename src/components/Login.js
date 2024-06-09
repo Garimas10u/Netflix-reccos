@@ -72,8 +72,8 @@ const Login = () => {
   return (
     <div>
       <Header/>
-      <div className='absolute'>
-        <img src={bg} alt="bg" />
+      <div className='fixed'>
+        <img src={bg}  alt="bg" />
       </div>
       <form 
       onSubmit={(e)=> e.preventDefault()}

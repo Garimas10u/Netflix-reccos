@@ -19,7 +19,7 @@ const useTopratedMovies=()=>{
      
    };
    useEffect(()=>{
-     getTopratedMovies();
+      getTopratedMovies();
      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 };

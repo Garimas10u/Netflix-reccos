@@ -27,7 +27,6 @@
     -main movie  <br>
     -trailer  <br>
     -Title and Description  <br>
--Netflix GPT  <br>
 -Search Bar  <br>
 -Movie Suggestions  <br>
 -multilanguage Feature  <br>

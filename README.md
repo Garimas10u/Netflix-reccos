@@ -1,4 +1,4 @@
-# Netflix GPT
+# Netflix Reccos
 -Create React App <br>
 -configured TailwindCSS <br>
 -Header  <br>
@@ -31,4 +31,4 @@
 -Search Bar  <br>
 -Movie Suggestions  <br>
 -multilanguage Feature  <br>
--Integrate GPT API  <br>
+-Integrate Gemini API  <br>

@@ -10,6 +10,7 @@ const appStore=configureStore({
         movies: moviesReducer,
         gpt: gptReducer,
         config: configReducer,
+        
     },
 });
 export default appStore;

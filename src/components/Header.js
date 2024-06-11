@@ -59,21 +59,22 @@ const Header = () => {
   }
 
   return (
-    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex md:flex-row flex-col  justify-between'>
+    <div className='absolute w-screen px-12 py-2 mb-6 bg-gradient-to-b from-black z-10 flex md:flex-row flex-col justify-between'>
         <img className='w-44 mx-auto md:mx-0' src={LOGO} alt="logo" />
 
        {user && (<div>
-        <div className='flex  items-center p-2'>
-          {showGptSearch && <select className='p-4 mx-6 bg-gray-900 text-white ' onClick={handleLangChange}> 
+        <div className='flex items-center justify-center text-sm md:text-lg p-2'>
+          {showGptSearch && <select className='p-2 px-4 mr-6 md:p-4 md:mx-6 bg-gray-900 text-white ' onClick={handleLangChange}> 
             <option value="en">English</option>
             <option value="hindi">Hindi</option>
             <option value="spanish">Spanish</option>
           </select>}
-        <button className='p-4 mr-6 rounded-lg bg-red-700 text-white' onClick={handleGptSearchClick}>
+        <button className=' p-2 mr-4 md:p-3 md:mr-6 rounded-lg bg-red-700  text-white' onClick={handleGptSearchClick}>
           {showGptSearch? "Home" : "GPT Search"}
           </button>
-       <FaUser size={40} color='white' className=''/>
-       <button onClick={handleSignout}className='font-bold text-white align-center text-sm md:text-lg'>Sign Out</button>
+          <div><FaUser size={35} color='white'  className=' hidden md:block'/></div>
+       <div><FaUser size={20} color='white'  className='md:hidden'/></div>
+       <button onClick={handleSignout}className=' text-white align-center hidden md:inline-block '>Sign Out</button>
         </div>
       
        </div>

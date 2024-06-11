@@ -7,8 +7,8 @@ const GptSearch = () => {
  
   return (
     <div>
-        <div className="fixed -z-10 ">
-            <img src={netbg}  alt="" />
+        <div className="fixed m-0 p-0 box-border -z-10">
+            <img className="h-screen w-screen object-cover" src={netbg}  alt="" />
         </div>
         <div className="pt-[35%] md:p-0">
           <GptSearchBar />

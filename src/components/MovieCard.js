@@ -6,7 +6,7 @@ const MovieCard = ({posterPath}) => {
 
   return (
     <div className='w-60 pr-4 transform transition-transform hover:scale-110'>
-        <img src={IMG_CDN_URL + posterPath} className="  object-cover rounded-lg" alt="MOVIE POSTER" />
+        <img src={IMG_CDN_URL + posterPath} className=" object-contain rounded-lg" alt="MOVIE POSTER" />
     </div>
   )
 }

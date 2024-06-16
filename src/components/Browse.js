@@ -24,7 +24,15 @@ const Browse = () => {
     <div>
       <Header/>
       {
-        showGptSearch ?(<GptSearch /> ) :
+        showGptSearch ?(
+          <>
+          <GptSearch />
+          <Footer />
+  
+         
+          </>
+        
+      ) :
          (
          <>
          <MainContainer/>

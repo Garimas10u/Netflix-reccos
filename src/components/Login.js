@@ -86,7 +86,7 @@ const Login = () => {
         placeholder="Full Name" 
         className='p-2 my-4 w-full bg-gray-700'/>)}
 
-        <input type="text"
+        <input type="text" 
         ref={email} placeholder='Email Address' className='p-2 my-4 w-full bg-gray-700' />
 
         <input type="password" 
